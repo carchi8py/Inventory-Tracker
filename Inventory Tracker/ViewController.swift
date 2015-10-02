@@ -33,6 +33,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imageView.addGestureRecognizer(tapGesture)
         imageView.userInteractionEnabled = true
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        var item = Item(name: "Cup", cost: 9.99, imageName: "Cup.png")
+        println("item: \(item)")
     }
 
     @IBAction func addButtonPressed(sender: AnyObject) {

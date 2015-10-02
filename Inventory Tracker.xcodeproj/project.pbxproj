@@ -13,6 +13,7 @@
 		279822A51BBE019D009CFE09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279822A41BBE019D009CFE09 /* Images.xcassets */; };
 		279822A81BBE019D009CFE09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279822A61BBE019D009CFE09 /* LaunchScreen.xib */; };
 		279822B41BBE019D009CFE09 /* Inventory_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279822B31BBE019D009CFE09 /* Inventory_TrackerTests.swift */; };
+		279822BE1BBE12C3009CFE09 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279822BD1BBE12C3009CFE09 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		279822AD1BBE019D009CFE09 /* Inventory TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Inventory TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		279822B21BBE019D009CFE09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279822B31BBE019D009CFE09 /* Inventory_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory_TrackerTests.swift; sourceTree = "<group>"; };
+		279822BD1BBE12C3009CFE09 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				2798229D1BBE019D009CFE09 /* AppDelegate.swift */,
 				2798229F1BBE019D009CFE09 /* ViewController.swift */,
+				279822BD1BBE12C3009CFE09 /* Item.swift */,
 				279822A11BBE019D009CFE09 /* Main.storyboard */,
 				279822A41BBE019D009CFE09 /* Images.xcassets */,
 				279822A61BBE019D009CFE09 /* LaunchScreen.xib */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				279822A01BBE019D009CFE09 /* ViewController.swift in Sources */,
+				279822BE1BBE12C3009CFE09 /* Item.swift in Sources */,
 				2798229E1BBE019D009CFE09 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
