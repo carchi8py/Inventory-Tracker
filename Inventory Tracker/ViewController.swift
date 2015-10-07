@@ -46,6 +46,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let loadedItem = loadedItem {
             print("Loaded: \(loadedItem)")
         }
+        
+        //test out Inventory class
+        
+        var investory = Inventory()
+        print("Inventory \(investory)")
     }
     
     // Save and Load data

@@ -14,6 +14,7 @@
 		279822A81BBE019D009CFE09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279822A61BBE019D009CFE09 /* LaunchScreen.xib */; };
 		279822B41BBE019D009CFE09 /* Inventory_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279822B31BBE019D009CFE09 /* Inventory_TrackerTests.swift */; };
 		279822BE1BBE12C3009CFE09 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279822BD1BBE12C3009CFE09 /* Item.swift */; };
+		27B379201BC4AD4E0070DFBF /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3791F1BC4AD4E0070DFBF /* Inventory.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		279822B21BBE019D009CFE09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279822B31BBE019D009CFE09 /* Inventory_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory_TrackerTests.swift; sourceTree = "<group>"; };
 		279822BD1BBE12C3009CFE09 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		27B3791F1BC4AD4E0070DFBF /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				2798229D1BBE019D009CFE09 /* AppDelegate.swift */,
 				2798229F1BBE019D009CFE09 /* ViewController.swift */,
 				279822BD1BBE12C3009CFE09 /* Item.swift */,
+				27B3791F1BC4AD4E0070DFBF /* Inventory.swift */,
 				279822A11BBE019D009CFE09 /* Main.storyboard */,
 				279822A41BBE019D009CFE09 /* Images.xcassets */,
 				279822A61BBE019D009CFE09 /* LaunchScreen.xib */,
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B379201BC4AD4E0070DFBF /* Inventory.swift in Sources */,
 				279822A01BBE019D009CFE09 /* ViewController.swift in Sources */,
 				279822BE1BBE12C3009CFE09 /* Item.swift in Sources */,
 				2798229E1BBE019D009CFE09 /* AppDelegate.swift in Sources */,
