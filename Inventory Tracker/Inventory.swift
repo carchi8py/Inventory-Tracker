@@ -1,44 +1,46 @@
 //
 //  Inventory.swift
-//  Inventory Tracker
+//  InventoryTracker
 //
-//  Created by Chris Archibald on 10/6/15.
-//  Copyright © 2015 Chris Archibald. All rights reserved.
+//  Created by Paul Solt on 11/23/14.
+//  Copyright (c) 2014 Paul Solt. All rights reserved.
 //
 
 import UIKit
 
 class Inventory: NSObject, NSCoding {
-    
-    //list of items
+   
+    // list of items
     var itemArray: [Item]
     
-    // last viewed Item
+    // last viewed item
     var lastViewedIndex: Int?
     
-    let kItemArray = "itemArray"
-    let KLastViewedIndex = "lastViewedIndex"
+    let kItemArrayKey = "itemArray"
+    let kLastViewedIndex = "lastViewedIndex"
     
     override init() {
         itemArray = [Item]()
         lastViewedIndex = nil
         
+        // Lastly call super.init()
         super.init()
     }
     
     override var description: String {
-        return "items: \(itemArray), lastViewedIndex \(lastViewedIndex)"
+        return "items: \(itemArray), lastViewedIndex: \(lastViewedIndex)"
     }
     
-    required init(coder decoder: NSCoder) {
-        itemArray = decoder.decodeObjectForKey(kItemArray) as! [Item]
-        lastViewedIndex = decoder.decodeObjectForKey(KLastViewedIndex) as! Int?
+    required init?(coder decoder: NSCoder) {
+        itemArray = decoder.decodeObjectForKey(kItemArrayKey) as! [Item]
+        lastViewedIndex = decoder.decodeObjectForKey(kLastViewedIndex) as! Int?
         
         super.init()
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(itemArray, forKey: kItemArray)
-        aCoder.encodeObject(lastViewedIndex, forKey: KLastViewedIndex)
+        aCoder.encodeObject(itemArray, forKey: kItemArrayKey)
+        aCoder.encodeObject(lastViewedIndex, forKey: kLastViewedIndex)
     }
+    
 }

@@ -1,9 +1,9 @@
 //
 //  Item.swift
-//  Inventory Tracker
+//  InventoryTracker
 //
-//  Created by Chris Archibald on 10/1/15.
-//  Copyright (c) 2015 Chris Archibald. All rights reserved.
+//  Created by Paul Solt on 11/23/14.
+//  Copyright (c) 2014 Paul Solt. All rights reserved.
 //
 
 import UIKit
@@ -17,7 +17,11 @@ class Item: NSObject, NSCoding {
     
     var image: UIImage?
     
-    // Initializers
+    let kNameKey = "name"
+    let kCostKey = "cost"
+    let kImageNameKey = "imageName"
+    
+    // initializers
     
     init(name: String, cost: Double, imageName: String) {
         self.name = name
@@ -26,33 +30,32 @@ class Item: NSObject, NSCoding {
         
         self.image = nil
         
-        // Required to init super class
+        // required to init super class
         super.init()
     }
     
     override var description: String {
-        return "\(name), \(cost), image Name: \(imageName)"
+        return "\(name), $\(cost), image name: \(imageName)"
     }
     
-    let kNameKey = "name"
-    let kCostKey = "cost"
-    let kImageNameKey = "imageName"
+    // NSCoder Protocol methods
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         self.name = aDecoder.decodeObjectForKey(kNameKey) as! String
         self.cost = aDecoder.decodeDoubleForKey(kCostKey) as Double
         self.imageName = aDecoder.decodeObjectForKey(kImageNameKey) as! String
         
         self.image = nil
-        
-        super.init()
+    
+        super.init() // subclass of another super.init(coder)
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(name, forKey: kNameKey)
         aCoder.encodeDouble(cost, forKey: kCostKey)
         aCoder.encodeObject(imageName, forKey: kImageNameKey)
-    
-    // Don't encode images in archives, storm a name to the image file on disk
+        
+        // don't encode images in archives, store a name to the image file on disk
     }
+    
 }
