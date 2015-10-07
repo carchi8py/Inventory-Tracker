@@ -159,6 +159,7 @@
 		279822901BBE019D009CFE09 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Chris Archibald";
 				TargetAttributes = {
@@ -415,6 +416,7 @@
 				279822B91BBE019D009CFE09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		279822BA1BBE019D009CFE09 /* Build configuration list for PBXNativeTarget "Inventory TrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +425,7 @@
 				279822BC1BBE019D009CFE09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
