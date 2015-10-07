@@ -36,6 +36,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         var item = Item(name: "Cup", cost: 9.99, imageName: "Cup.png")
         print("item: \(item)")
+        
+        let path = fileInDocumentsDirectory(item.name)
+        let success = saveItemToDisk(item, path: path)
+        print("Save success? \(success)")
+    }
+    
+    // Save and Load data
+    
+    func saveItemToDisk(item: Item, path: String) -> Bool {
+        var success = false
+        
+        success = NSKeyedArchiver.archiveRootObject(item, toFile: path)
+        
+        return success
     }
 
     @IBAction func addButtonPressed(sender: AnyObject) {
