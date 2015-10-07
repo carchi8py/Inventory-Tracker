@@ -16,7 +16,7 @@ func documentsDirectory() -> String {
 
 // File in Documents Directory
 func fileInDocumentsDirectory(filename: String) -> String {
-    return documentsDirectory().stringByAppendingString(filename)
+    return documentsDirectory().stringByAppendingString("/" + filename)
 }
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -37,9 +37,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var item = Item(name: "Cup", cost: 9.99, imageName: "Cup.png")
         print("item: \(item)")
         
-        let path = fileInDocumentsDirectory(item.name)
+        let path = fileInDocumentsDirectory(item.name + ".plist")
+        print("item Path \(path)")
         let success = saveItemToDisk(item, path: path)
         print("Save success? \(success)")
+        
+        var loadedItem = loadItemFromDisk(path)
+        if let loadedItem = loadedItem {
+            print("Loaded: \(loadedItem)")
+        }
     }
     
     // Save and Load data
@@ -50,6 +56,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         success = NSKeyedArchiver.archiveRootObject(item, toFile: path)
         
         return success
+    }
+    
+    func loadItemFromDisk(path: String) -> Item? {
+        var result:Item? = nil
+        result = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as! Item?
+        return result
     }
 
     @IBAction func addButtonPressed(sender: AnyObject) {
